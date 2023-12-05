@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Algebra Relacional</title>
+        <link rel="icon" href="imagenes/favicon.png">
+    </head>    
+        <style> 
+            body { background: linear-gradient(to bottom, #584303, #d7c8a1); margin: 0; height: 100vh;}
+        </style> 
+       
+        <body>
+            <h1 style="color: #EBD758; font-family:Comic Sans MS; text-align: center; background-color: #3f3002; font-size: 300%; font-weight: bold; text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;">ALGEBRA RELACIONAL</h1>
+            
+            <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center; font-size: 130%;">El 
+                <b>álgebra relacional</b> 
+            se considera un lenguaje de consulta procedimental, que representa los pasos de un conjunto de operaciones, donde intervienen, una o más relaciones de entrada, dando como resultado una nueva relación.</p>
+            
+            <table align="center" cellspacing="4" cellpadding="4" border="3" style="background-color:#FFF8DC ">
+                <tr>
+                    <td colspan="4" style="text-align:center; background-color: #B8860B; color: #7e0c0c; font-size: larger;"><strong>OPERACIONES FUNDAMENTALES</strong></font></td>
+                </tr>
+                <tr style="background-color:#8B4513; text-align: center;">
+                    <th >SIMBOLO</th>
+                    <th >NOMBRE</th>
+                    <th >USO</th>
+                    <th >SINTAXIS</th>
+                    
+                </tr>
+                <tr style="text-align: center;">
+                    <td style="font-size:xx-large;"><b>σ</b></td>
+                    <td ><b>Seleccion</b></td>
+                    <td >Se utiliza para indicar que se deben seleccionar las tuplas que satisfacen la condicion especificada</td>
+                    <td >σ--c--(R) <br><b>C </b> es la condicion</td>
+                    
+                </tr>
+                <tr style="text-align: center;">
+                    <td style="font-size:xx-large;"><b>π</b></td>
+                    <td ><b>Proyeccion</b></td>
+                    <td >Se utiliza para determinar las columnas determinadas a proyectar</td>
+                    <td >π A1 ,. . . , An (R) <br> Resultando el esquema (A1,...,An) </td>
+                </tr>
+
+                <tr style="text-align: center;">
+                    <td style="font-size:xx-large;"><b>U</b></td>
+                    <td ><b>Union</b></td>
+                    <td >Combina dos relaciones compatibles y devuelve una nueva relacion</td>
+                    <td >(-relación-) U (-relación-) <br>(R υ R)</td>
+                    
+                </tr>
+
+                <tr style="text-align: center;">
+                    <td style="font-size:xx-large;"><b>∩</b></td>
+                    <td ><b>Interseccion</b></td>
+                    <td >Combina dos relaciones compatibles y devuelve una nueva relacion</td>
+                    <td >(-relación-) ∩ (-relación-) <br>(R ∩ R)</td>
+                </tr>
+
+                <tr style="text-align: center;">
+                    <td style="font-size:xx-large;"><b>-</b></td>
+                    <td ><b>Diferencia</b></td>
+                    <td >Devuelve la relacion que esta presente en una tupla, pero no en la otra</td>
+                    <td >(-relación-) - (-relación-) <br>(R - R)</td>
+                </tr>
+
+                <tr style="text-align: center;">
+                    <td style="font-size:xx-large;"><b>x</b></td>
+                    <td ><b>Producto Cartesiano</b></td>
+                    <td >Combina cata tupla de la primera relacion con cada tupla de la segunda relacion</td>
+                    <td >(-relación-) x (-relación-) <br>(R - R) -- (A1,...,An,B1,...,Bm)</td>
+                </tr>
+
+                <tr style="text-align: center;">
+                    <td style="font-size:xx-large;"><b>ρ</b></td>
+                    <td ><b>Renombrado</b></td>
+                    <td >Cambia los nombres de las relaciones o columnas segun es especificado</td>
+                    <td >ρ X (R) </td>
+                </tr>
+                </table>
+
+
+            <h2 style="color: #EBD758; font-family:Comic Sans MS; text-align: center; background-color: #725e28; font-size: 140%; font-weight: bold; text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;">OPERADORES DERIVADOS</h2>    
+            
+            <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center; font-size: 130%;">Se definen otros que se pueden expresar en función de los básicos, pero que <b>expresan operaciones importantes</b> dado que se usan habitualmente.</p>
+
+            <table align="center" cellspacing="4" cellpadding="4" border="3" style="background-color:#FFF8DC ">
+                <tr>
+                    <td colspan="4" style="text-align:center; background-color: #B8860B; color: #f7f7f7; font-size: larger;"><strong>OPERACIONES DERIVADOS</strong></font></td>
+                </tr>
+                <tr style="background-color:#8B4513; text-align: center;">
+                    <th >SIMBOLO</th>
+                    <th >NOMBRE</th>
+                    <th >USO</th>
+                    
+                </tr>
+                <tr style="text-align: center;">
+                    <td><img src="imagenes/join.png"></td>
+                    <td ><b>Join</b></td>
+                    <td >Combina tuplas de dos relaciones basandose en la condicion de igualdad entre columnas especificas <br>Otros tipos son: <b>inner join, left join, right join y full outer join </b></td>
+                </tr>
+
+                <tr style="text-align: center;">
+                    <td style="font-size:400%"><b>÷</b></td>
+                    <td ><b>Division</b></td>
+                    <td >Se utiliza para encontrar tuplas en una relacion que esten relacionadas con todas las tuplas de la otra relacion  <br> Es una operacion mas avanzada requiere un enfoque especifico</td>
+                </tr>
+
+                <tr style="text-align: center;">
+                    <td ><img src="imagenes/agregar.png" width="80" height="80"></td>
+                    <td ><b>Agregacion</b></td>
+                    <td >Se utiliza para calcular valores resumen de una columna en una relacion <br> <b>SUM, AVG, COUNT, MAX, MIN</b></td>
+                    
+                </tr>
+
+                <tr style="text-align: center;">
+                    <td ><img src="imagenes/diferencia.png" width="80" height="80"></td>
+                    <td ><b>Diferencia de conjuntos</b></td>
+                    <td >Algunos sistemas de bases de datos tambien admiten operaciones de conjunto 
+                        <br> <b>UNION ALL</b> (union que no elimina duplicados) 
+                        <br><b>INSERSECT ALL</b> (interseccion que permite duplicados)</td>
+                    
+                </tr>
+
+                <tr style="text-align: center;">
+                    <td ><img src="imagenes/ordenar.png" width="80" height="80"></td>
+                    <td ><b>Ordenamiento</b></td>
+                    <td >Se utiliza para ordenar las tuplas de una realcion segun los valores de una o mas columnas <br><b>ORDER BY</b> </td>
+                    
+                </tr>
+
+                <tr style="text-align: center;">
+                    <td ><img src="imagenes/consulta.png" width="80" height="80"></td>
+                    <td ><b>Subconsultas</b></td>
+                    <td >Permiten realizar una consulta dentro de otra consulta se puede utilizar en <b>WHERE</b> o en <b>FROM</b></td>
+                    
+                </tr>
+                </table>
+
+                <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center; font-size: 130%;">Estas operaciones adicionales amplian la funcionalidad del algebra relacional y permiten realizar consultas segun las nescesidades de los usuarios</p>
+                <h1 style="background-color: #3f3002; color: #3f3002;">...</h1>
+        </body>
+</html>
